@@ -1,8 +1,3 @@
-USE D05_VISN21Sites;
-GO
-CREATE PROCEDURE MAC.SP_UTI
-AS
-
 SELECT
 	SPatient.PatientSID
 	,SPatient.Sta3n
@@ -163,5 +158,3 @@ FROM
 WHERE
 	tbl2.SpecimenDate BETWEEN tbl1.VisitDate AND CAST(DATEADD(DAY, +5, tbl1.VisitDate) AS DATE)
 	AND tbl2.DispensedDate BETWEEN tbl2.SpecimenDate AND CAST(DATEADD(DAY, +14, tbl2.SpecimenDate) AS DATE)
-
-GO
